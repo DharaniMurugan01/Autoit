@@ -22,5 +22,33 @@
     <artifactId>pdfbox</artifactId>
     <version>3.0.4</version>
 </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.9.0</version> <!-- You can change version if needed -->
+        <scope>test</scope>
+    </dependency>
 </dependencies>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M9</version>
+      <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+      </configuration>
+    </plugin>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>exec-maven-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <mainClass>com.AutoIt.Demo2</mainClass> <!-- If it's in a package, use full name like com.example.Demo2 -->
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 </project>
