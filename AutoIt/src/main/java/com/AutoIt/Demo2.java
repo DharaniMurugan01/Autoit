@@ -27,6 +27,7 @@ public class Demo2{
 	        Thread.sleep(2000);
 	        r.keyPress(KeyEvent.VK_ENTER);
 	        r.keyRelease(KeyEvent.VK_ENTER);
+	        System.out.println("file uploaded");
 	        driver.quit();
 	 }
 }
